@@ -1,6 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 *{
+-o-
+-moz-
+-webkit-
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -37,7 +40,7 @@ body{
 }
 .menu-bar ul li{
 	width: 100px;
-	margin: 12px;
+	margin: 10px;
 	padding: 10px;
 	font-family:'PT Sans', sans-serif;
 	font-size: 15px;
@@ -46,8 +49,8 @@ body{
 .menu-bar ul li a{
 	color: #fff;
 	text-decoration: none;
-	margin: .7rem;
-	padding: .7rem;
+	margin: .4rem;
+	padding: .4rem;
 	transition: 500ms all linear;
 }
 .active, .menu-bar ul li:hover {
