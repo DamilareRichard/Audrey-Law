@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Gallery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<style type="text/css">
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+	padding: 10px;
+	background-image: url(new.jpg);
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	min-height: 100vh;
+	background-repeat: no-repeat;
+	font-family:'PT Sans', sans-serif;
+}
+
+.menu-bar {
+	
+	background: #FFE3C6;
+	height: 15%;
+	text-align: center;
+	
+}
+
+.menu-bar ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	list-style-type: none;
+	color: #000;
+	font-family:'PT Sans', sans-serif;
+}
+.menu-bar ul li{
+	width: 100px;
+	margin: 12px;
+	padding: 10px;
+	font-family:'PT Sans', sans-serif;
+	font-size: 16px;
+
+}
+.menu-bar ul li a{
+	color: #fff;
+	text-decoration: none;
+	margin: .5rem;
+	padding: .5rem;
+	transition: 500ms all linear;
+}
+.active, .menu-bar ul li:hover {
+	background: linear-gradient(to right top, #159957, #155799);
+	border-radius: 3px;	
+}
+.menu-bar .fa{
+	margin-right: 3px;
+}
+.sub-menu {
+	display: none;
+	color: #000;
+}
+.menu-bar ul li:hover .sub-menu {
+	display: block;
+	position: absolute;
+	background: linear-gradient(to right top, #0F2027, #203A43, #2C5364);
+	margin-top: 12px;
+	margin-left: -12px;
+}
+.menu-bar ul li:hover .sub-menu ul{
+	display: block;
+	margin: 5px;
+
+}
+.menu-bar ul li:hover .sub-menu ul li {
+	width: 170px;
+	padding: 10px;
+	border-bottom: 1px solid #fff;
+	background:transparent;
+	border-radius: 0;
+	text-align: left;
+
+}
+.menu-bar ul li:hover .sub-menu ul li:last-child{
+	border-bottom: none
+}
+.menu-bar ul li:hover .sub-menu ul li a:hover{
+	color: #000;
+}
+.fa-angle-right{
+	float: right;
+}
+
+.sub-menu-1{
+	display: none;
+	color: #000;
+}
+.hover-me:hover .sub-menu-1{
+	display:block; 
+	position: absolute;
+	margin-top: -30px;
+	margin-left: 120px;
+	background:#FFDFB5;
+	color: red;
+
+} 	
+
+@media screen and (min-width:330px) and (max-width: 800px){
+
+body{
+
+	min-height:100vh;
+	padding: 10px; 	
+}
+.menu-bar{
+	width: 100%;
+	margin-bottom: 5px;
+	
+}
+
+.menu-bar ul li{
+	
+	margin-bottom: 20px;
+	
+}
+.active,.menu-bar ul li a{
+	margin: 2px;
+	padding: 5px;
+	width: 80%;
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+.menu-bar ul li:hover .sub-menu ul li {
+	width: 120px;
+	padding: 2px;
+	margin: 5px;
+	border-bottom: 1px solid #fff;
+	background:transparent;
+	border-radius: 0;
+	text-align: left;
+}
+
+</style>
+<body>
+	<div class="menu-bar">
+	<ul>
+		<li class="active"><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+			
+		<li><a href="#"><i class="fa fa-user"></i>About Us</a>
+			<div class="sub-menu">	
+				<ul>
+						<li><a href="#">Mission</a></li>
+						<li><a href="#">Vision</a></li>
+						<li><a href="#">Team</a></li>	
+					</ul>
+				</div>
+		</li>
+		<li><a href="#"><i class="fa fa-clone"></i>Services</a><div class="sub-menu">	
+				<ul>
+						<li><a href="#">Intellectual property matters</a></li>
+						<li><a href="#">Business registrations</a></li>
+						<li class="hover-me"><a href="#">Legal review and drafting</a><i class="fa fa-angle-right"></i>
+						 <div class="sub-menu-1">
+							<ul>
+						       <li><a href="#">Regulatory compliance</a></li>
+						       <li><a href="#">Consumer protection matters</a></li>	
+					        </ul>
+
+						 </div>
+
+						</li>
+						<li class="hover-me"><a href="#">Others</a><i class="fa fa-angle-right"></i>
+							<div class="sub-menu-1">
+							<ul>
+						       <li><a href="#">Company secretarial services</a></li>
+						       <li><a href="#">Employment regulations</a></li>
+						       <li><a href="#">Debt recovery</a></li>	
+					        </ul>
+					    </div>
+						</li>	
+					</ul>
+				</div></li>
+		<li><a href="#"><i class="fa fa-user"></i>Clients</a></li>
+		<li><a href="#"><i class="fa fa-picture-o"></i>Gallery</a></li>
+		<li><a href="contact.html"><i class="fa fa-phone"></i>Contact</a></li>
+	</ul>
+	</div>
+	
+	
+<h1>Soon</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
