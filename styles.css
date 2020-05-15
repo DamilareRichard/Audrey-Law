@@ -11,6 +11,7 @@ box-sizing: border-box;
 
 body{
 	padding: 0px 10px;
+	opacity: 1;
 	background-image: url(new.jpg);
 	background-position: center;
 	background-size: cover;
@@ -27,6 +28,7 @@ body{
 	height: 20%;
 	text-align: center;
 	margin: 0px;
+	opacity: .8;
 }
 
 .menu-bar ul{
@@ -44,6 +46,7 @@ body{
 	padding: 12px;
 	font-family:'PT Sans', sans-serif;
 	font-size: 16px;
+
 	
 
 }
@@ -53,6 +56,8 @@ body{
 	margin: .5rem;
 	padding: .5rem;
 	transition: 500ms all linear;
+
+	
 }
 .active, .menu-bar ul li:hover {
 	background: linear-gradient(to right top, #159957, #155799);
@@ -134,6 +139,7 @@ body{
 
 .note a{
 	font-size: 22px;
+	font-weight: 600;
 	color: blue;
 	text-decoration: none;
 	cursor: pointer;
@@ -141,7 +147,8 @@ body{
 .note p{
 	text-align: center;
 	box-sizing: border-box;
-	background: black;
+	background: #000;
+	opacity: .9;
 	border-radius: 5px;
 	margin: auto;
 	padding: 10px;
