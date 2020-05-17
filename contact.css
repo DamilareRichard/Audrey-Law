@@ -1,121 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+-moz-
+-o-
+-webkit-
+
 }
 
 body{
-	padding: 10px;
-	background-image: url(new.jpg);
-	background-position: center;
+	background: url(bg1.jpg);
 	background-size: cover;
-	width: 100%;
-	min-height: 100vh;
+	background-position: center;
 	background-repeat: no-repeat;
-	font-family:'PT Sans', sans-serif;
+	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
 }
-
-.menu-bar {
-	
-	background: #000;
-	height: 15%;
-	text-align: center;
+.side-bar {
+	position: fixed;
+	left: -250px;
+	width: 220px;
+	height: 100%;
+	background: lightseagreen;
+	transition: all .5s ease;
 	opacity: .8;
-	
 }
-
-.menu-bar ul{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	list-style-type: none;
-	color: #000;
-	font-family:'PT Sans', sans-serif;
-}
-.menu-bar ul li{
-	width: 100px;
-	margin: 15px;
-	padding: 12px;
-	font-family:'PT Sans', sans-serif;
-	font-size: 16px;
-
-}
-.menu-bar ul li a{
+.side-bar header{
+	font-size: 20px;
 	color: #fff;
+	text-align: center;
+	line-height: 70px;
+	background: navy;
+	user-select: none;
+}
+	.side-bar ul{
+		list-style: none;
+        
+	}
+.side-bar ul a{
+	display: block;
+	height: 100%; 
+	widows: 100%;
+	line-height: 65px;
+	font-size: 20px;
+	color: #fff;
+	padding-left: 40px;
+	border-top: 1px solid #ccc;
+	box-sizing: border-box;
+	border-bottom: 1px solid #000;
 	text-decoration: none;
-	margin: .5rem;
-	padding: .5rem;
-	transition: 500ms all linear;
+	transition: all .5s ease;
 }
-.active, .menu-bar ul li:hover {
-	background: linear-gradient(to right top, #159957, #155799);
-	border-radius: 3px;	
+
+ul li:hover a{
+	padding-left: 50px; 
 }
-.menu-bar .fa{
-	margin-right: 3px;
+
+.side-bar ul a i{
+	margin-right: 16px;
 }
-.sub-menu {
+
+#check{
 	display: none;
-	color: #000;
 }
-.menu-bar ul li:hover .sub-menu {
-	display: block;
+label #btn,label #cancel{
 	position: absolute;
-	background: linear-gradient(to right top, #0F2027, #203A43, #2C5364);
-	margin-top: 12px;
-	margin-left: -12px;
-}
-.menu-bar ul li:hover .sub-menu ul{
-	display: block;
-	margin: 5px;
+	cursor: pointer;
+	background: #021B79;
+	border-radius: 3px;
 
-}
-.menu-bar ul li:hover .sub-menu ul li {
-	width: 170px;
-	padding: 10px;
-	border-bottom: 1px solid #fff;
-	background:transparent;
-	border-radius: 0;
-	text-align: left;
+	}
 
-}
-.menu-bar ul li:hover .sub-menu ul li:last-child{
-	border-bottom: none
-}
-.menu-bar ul li:hover .sub-menu ul li a:hover{
-	color: red;
-}
-.fa-angle-right{
-	float: right;
-}
+	label #btn {
+		left: 40px;
+		top: 25px;
+		font-size: 35px;
+		color: #fff;
+		padding: 5px 10px;
+		transition: all .5s ease;
+	}
 
-.sub-menu-1{
-	display: none;
-	color: #000;
-}
-.hover-me:hover .sub-menu-1{
-	display:block; 
-	position: absolute;
-	margin-top: -30px;
-	margin-left: 120px;
-	background:#000;
-	
+	label #cancel{
+		position: fixed;
+		z-index: 1111;
+		left: 195px;
+		top: 28px;
+		font-size: 26px;
+		color: #000;
+		padding: 2px 7px;
+		transition: all .5s ease; 
 
-} 	
+	}
+	#check:checked ~ .side-bar{
+		left: 0;
+	}
+
+	#check:checked ~ label #btn{
+		left: 250px;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	#check:checked ~ label #cancel{
+		left: 175px;
+
+	}
 .c-wrapper{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: space-between;
-	padding: 50px;
-	margin: 50px;
+	justify-content: center;
+	align-items: space-around;
+	padding: 20px;
+	margin: 15px;
 }
 
-h1{ 
+.c-wrapper header{ 
 	font-size: 22px;
 	font-family: sans-serif;
-	margin: 20px;
+	margin: 10px;
 	color: #3657B3;
 
 }
@@ -130,7 +131,7 @@ h1{
 	height: 20%;
 	width: 80%;
 	text-align: center;
-	padding: 15px;
+	padding: 10px;
 	margin: 10px;
 	cursor: pointer;
 }
@@ -142,7 +143,7 @@ h1{
  a{
  	text-decoration: none;
  	color: #000;
- 	padding: 15px;
+ 	padding: 5px;
  }
 
 .contact-tel span{
@@ -163,7 +164,7 @@ h1{
 	height: 20%;
 	width: 60%;
 	text-align: center;
-	padding: 15px;
+	padding: 10px;
 	margin: 10px;
 	cursor: pointer;
 
@@ -175,8 +176,8 @@ h1{
 .add div{
 	font-size: 18px;
 	font-weight: 500;
-	margin: 12px;
-	padding: 15px;
+	margin: 10px;
+	padding: 10px;
 
 	}
 
@@ -190,6 +191,7 @@ h1{
 	justify-content: flex-start;
 	align-self: flex-start;
 }
+
 .feedback{
 		background: #061161;
 		width: 25%;
@@ -202,11 +204,8 @@ h1{
 	color: #fff;
 	font-size: 18px;
 	font-family: sans-serif;
-	/*text-align: center;*/
-	margin: 70px;
+	margin: 80px;
 	padding: 15px;
-
-
 }
 
 .feedback input[type="text"]  {
@@ -218,9 +217,10 @@ h1{
 	background: transparent;
 	color: #fff;
 	outline: none;
+	width: 100%;
 	height: 20px;
 	font-size:16px;
-	margin: 10px;
+	margin: 15px;
 	padding: 10px;
 
 }
@@ -237,7 +237,6 @@ label{
 	background: #4E80BB;
 	color: #fff;
 	outline: none;
-	
 	font-size:15px;
 	width: 50%;
 	border-radius: 5px;
@@ -249,62 +248,30 @@ label{
 input[type=submit]:hover {
   background-color: #014a20;
 }
-
-
-iframe{
-
-	margin-left: 300px;
-	width: 800px;
-	height: 500px;
-	margin-bottom: 20px;
-}
 @media screen and (min-width:315px) and (max-width: 768px){
 
 body{
 
-	min-height:100vh;
+	height:100vh;
 	padding: 10px; 	
 }
-.menu-bar{
-	width: 100%;
-	margin-bottom: 5px;
-	
-}
 
-.menu-bar ul li{
-	
-	margin-bottom: 20px;
-	
-}
-.active,.menu-bar ul li a{
-	margin: 2px;
-	padding: 5px;
-	width: 80%;
-	font-size: 12px;
-	margin-bottom: 20px;
-}
-.menu-bar ul li:hover .sub-menu ul li {
-	width: 120px;
-	padding: 2px;
-	margin: 5px;
-	border-bottom: 1px solid #fff;
-	background:transparent;
-	border-radius: 0;
-	text-align: left;
-}
 .c-wrapper{
 
-	margin: 30px;
+	margin: 20px;
 	padding: 5px;
+	justify-content: center;
+	align-items: center;
 }
 
-h1{
-	margin: 15px;
-	padding: 10px
+.c-wrapper header{
+	margin: 12px;
+	padding: 5px;
+	text-align: center;
 
 }
 .dial{
-	padding: 20px;
+	padding: 10px;
 	margin-left: 15px;
 	width: 100%;
 	height: 30%;
@@ -315,32 +282,36 @@ h1{
 	margin: 10px;
 }
 .add div{
-	margin: 5px;
-	/*padding: 10px;
-*/
+	margin: auto;
+	padding: 5px;
+	width: 70%;
+	height: 30%;
+	opacity: 1;
+
+
 }
 .add p{
 	text-align: center;
-	padding: .7rem 1rem;
-	height: 2.8rem;
-	margin: 22px;
-	width: 70%;
+	padding: .7rem .2rem;
+	height: 2.5rem;
+	margin:  10px 22px;
+	width: 80%;
 }
 .route{
-
-	width: 70%;
+	text-align: center;
+	width: 80%;
 	height: 3rem;
-	padding: .7rem 1rem;
-	margin-left: 15px;
+	padding: .7rem .2rem;
+	margin: 10px;
 	font-size: 16px;
 	font-weight: 550;
 }
 	
 
 .feedback{
-	width: 300px;
+	width: 250px;
 	height: 300px;
-	margin-left: 25px;
+	margin-left: 20px;
 	margin-bottom: 20px;
 }
 
@@ -352,12 +323,17 @@ h1{
 	padding: 15px;
 
 }
+
+.feedback input[type="text"]{
+	width: 100%;
+	height: 20px;
+
+}
 .feedback input[type="submit"]{
 	border: none; 
 	background: #4E80BB;
 	color: #fff;
 	outline: none;
-	
 	font-size:15px;
 	width: 50%;
 	border-radius: 5px;
@@ -365,5 +341,4 @@ h1{
 	cursor: pointer;
 	margin: 20px;
 
-}
 }
